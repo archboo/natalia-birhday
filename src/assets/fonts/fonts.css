@@ -1,0 +1,64 @@
+@font-face {
+  font-family: 'FirstFont';
+  src:
+    url('../../../public/fonts/EmoticalTypeface.otf') format('opentype'),
+    url('../../../public/fonts/EmoticalTypeface.otf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FirstFont';
+  src: url('/public/fonts/EmoticalTypeface.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SecondFont';
+  src:
+    url('/public/fonts/PastryChefCyrillic-Script.otf') format('opentype'),
+    url('/public/fonts/PastryChefCyrillic-Script.otf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SecondFont';
+  src: url('/public/fonts/PastryChefCyrillic-Script.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ThirdFont';
+  src:
+    url('/public/fonts/UraBumBumSP.otf') format('opentype'),
+    url('/public/fonts/UraBumBumSP.otf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ThirdFont';
+  src: url('/public/fonts/UraBumBumSP.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'FourthFont';
+  src:
+    url('/public/fonts/MariinavoFont-Regular.ttf') format('opentype'),
+    url('/public/fonts/MariinavoFont-Regular.ttf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FourthFont';
+  src: url('/public/fonts/MariinavoFont-Regular.ttf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}

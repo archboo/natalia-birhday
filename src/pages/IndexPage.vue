@@ -1,43 +1,48 @@
 <template>
-  <q-page class="row items-center justify-evenly">
-    <example-component
-      title="Example component"
-      active
-      :todos="todos"
-      :meta="meta"
-    ></example-component>
+  <q-page class="birthday-page" align="center">
+    <q-card class="birthday-page__main" flat>
+      <q-img src="/src/assets/main.png" :width="viewportWidth + 'px'" />
+    </q-card>
   </q-page>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import type { Todo, Meta } from 'components/models';
-import ExampleComponent from 'components/ExampleComponent.vue';
+import { ref, onMounted, onBeforeUnmount } from 'vue';
 
-const todos = ref<Todo[]>([
-  {
-    id: 1,
-    content: 'ct1',
-  },
-  {
-    id: 2,
-    content: 'ct2',
-  },
-  {
-    id: 3,
-    content: 'ct3',
-  },
-  {
-    id: 4,
-    content: 'ct4',
-  },
-  {
-    id: 5,
-    content: 'ct5',
-  },
-]);
+// Реактивная переменная
+const viewportHeight = ref(window.innerHeight);
+const viewportWidth = ref(window.innerWidth);
+// Обновление высоты
+const updateHeight = () => {
+  viewportHeight.value = window.innerHeight;
+};
 
-const meta = ref<Meta>({
-  totalCount: 1200,
+const updateWidth = () => {
+  viewportHeight.value = window.innerWidth;
+};
+
+// Подписка при монтировании
+onMounted(() => {
+  window.addEventListener('resize', updateHeight);
+  window.addEventListener('resize', updateWidth);
+});
+
+// Отписка при размонтировании
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', updateHeight);
+  window.removeEventListener('resize', updateWidth);
 });
 </script>
+
+<style scoped lang="scss">
+@font-face {
+  font-family: 'FourthFont';
+  src: url('/public/fonts/MariinavoFont-Regular.ttf') format('opentype');
+  font-weight: normal;
+  font-display: fallback;
+}
+.birthday-page {
+  background-image: url(../assets/background.png);
+  background: url(../assets/background.png);
+}
+</style>
