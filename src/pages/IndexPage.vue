@@ -1,7 +1,7 @@
 <template>
   <q-page class="birthday-page" align="center">
     <q-card class="birthday-page__main" flat>
-      <q-img src="/src/assets/main.png" :width="viewportWidth + 'px'" />
+      <q-img src="../assets/main.png" :width="viewportWidth + 'px'" />
     </q-card>
   </q-page>
 </template>
