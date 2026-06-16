@@ -1,0 +1,1 @@
+import{B as e}from"./index-D_mEoHUl.js";function t(e,t){let n=e.style;for(let e in t)n[e]=t[e]}function n(t){if(t==null)return;if(typeof t==`string`)try{return document.querySelector(t)||void 0}catch{return}let n=e(t);if(n)return n.$el||n}export{n,t};
